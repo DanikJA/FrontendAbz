@@ -1,0 +1,35 @@
+/* Mobile first (0 - 767px) */
+.container {
+  width: 100%;
+  max-width: 360px;
+  padding: 0 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ≥ 768px */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    padding: 0 34px;
+    margin: 0 auto;
+  }
+}
+
+/* ≥ 1024px */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+    padding: 0 60px;
+    margin: 0 auto;
+  }
+}
+
+/* ≥ 2560px */
+@media (min-width: 2560px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 696px;
+    margin: 0 auto;
+  }
+}
