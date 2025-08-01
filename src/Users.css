@@ -1,7 +1,7 @@
 .users {
-  background-color: #f4f4f4;
   text-align: center;
-  padding: 140px 16px;
+  padding: 0 16px;
+  margin: 140px 0;
 }
 
 .users__title {
@@ -52,7 +52,7 @@
 }
 
 .users__btn:hover {
-  background-color: #00a3b8;
+  background-color: #ffe302;
 }
 
 .user__info {

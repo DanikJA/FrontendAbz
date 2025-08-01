@@ -2,9 +2,29 @@
   display: flex;
   align-items: center;
   height: 60px;
-  background-color: #ffffff;
+  background-color: #fff;
   width: 100%;
-  top: 0;
+  padding: 0 16px;
+}
+/* ≥ 768px */
+@media (min-width: 768px) {
+  .header {
+    padding: 0 32px;
+  }
+}
+
+/* ≥ 1024px */
+@media (min-width: 1024px) {
+  .header {
+    padding: 0 60px;
+  }
+}
+
+/* ≥ 2560px */
+@media (min-width: 2560px) {
+  .header {
+    padding: 0px 0px;
+  }
 }
 
 .logo {
@@ -50,4 +70,9 @@ div {
   background: #f4e041;
   align-items: center;
   justify-content: center;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ffe302;
 }

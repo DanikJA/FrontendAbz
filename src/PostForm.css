@@ -1,8 +1,7 @@
 .post-form {
-  background-color: #f8f8f8;
-  padding: 40px 16px;
   text-align: center;
-  color: #000; /* <-- додай цей рядок */
+  color: #000;
+  margin-bottom: 100px;
 }
 .post-form__title {
   font-size: 22px;
@@ -11,6 +10,7 @@
 }
 
 .form {
+  position: relative;
   max-width: 380px;
   margin: 0 auto;
   display: flex;
@@ -55,8 +55,13 @@ label {
 }
 
 .form__submit:hover {
-  background-color: #00b2ff;
+  background-color: #ffe302;
   color: white;
+}
+
+.form__submit:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
 }
 
 /* 🎯 Стилізація radio buttons */
@@ -84,4 +89,49 @@ input[type="radio"]:checked::before {
 
 input[type="radio"]:focus {
   border-color: #00bdd3;
+}
+
+.form__hint {
+  position: absolute;
+  top: 157px;
+  left: 13px;
+  font-size: 12px;
+  color: #7e7e7e;
+}
+
+/* Upload */
+
+.upload-block {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.upload-label {
+  background-color: white;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid #333; /* темніший border */
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.upload-label:hover {
+  background-color: #e0e0e0;
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-filename {
+  font-size: 16px;
+  color: #7e7e7e;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  flex: 1;
+  border-radius: 0 4px 4px 0;
 }

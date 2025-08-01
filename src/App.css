@@ -2,17 +2,13 @@
 .container {
   width: 100%;
   max-width: 360px;
-  padding: 0 16px;
-  margin: 0 auto;
-  box-sizing: сontent-box;
-}
 
+  box-sizing: content-box;
+}
 /* ≥ 768px */
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding: 0 34px;
-    margin: 0 auto;
   }
 }
 
@@ -20,8 +16,6 @@
 @media (min-width: 1024px) {
   .container {
     max-width: 960px;
-    padding: 0 60px;
-    margin: 0 auto;
   }
 }
 
@@ -29,7 +23,7 @@
 @media (min-width: 2560px) {
   .container {
     max-width: 1400px;
-    padding: 0 696px;
-    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
   }
 }

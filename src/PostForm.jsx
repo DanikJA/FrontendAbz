@@ -76,7 +76,6 @@ const PostForm = () => {
         {
           headers: {
             Token: token,
-            // Не потрібно вказувати Content-Type для FormData
           },
         }
       );
@@ -99,6 +98,14 @@ const PostForm = () => {
       setIsSubmitting(false);
     }
   };
+
+  const isFormValid =
+    formData.name.trim() !== "" &&
+    formData.email.trim() !== "" &&
+    formData.phone.trim() !== "" &&
+    /^\+380\d{9}$/.test(formData.phone) &&
+    selectedPosition !== null &&
+    formData.photo !== null;
 
   return (
     <section className="post-form">
@@ -131,7 +138,7 @@ const PostForm = () => {
         <input
           type="tel"
           name="phone"
-          placeholder="+380XXXXXXXXX"
+          placeholder="Phone"
           required
           pattern="^\+380\d{9}$"
           value={formData.phone}
@@ -140,6 +147,7 @@ const PostForm = () => {
           }
           disabled={isSubmitting}
         />
+        <p className="form__hint">+38 (XXX) XXX - XX - XX</p>
         <p className="form__label">Select your position</p>
         {positions.map((pos) => (
           <label key={pos.id}>
@@ -156,8 +164,12 @@ const PostForm = () => {
           </label>
         ))}
         <div className="upload-block">
+          <label htmlFor="photo-upload" className="upload-label">
+            Upload
+          </label>
           <input
             type="file"
+            id="photo-upload"
             name="photo"
             accept=".jpg,.jpeg"
             required
@@ -165,9 +177,14 @@ const PostForm = () => {
               setFormData((prev) => ({ ...prev, photo: e.target.files[0] }))
             }
             disabled={isSubmitting}
+            className="upload-input"
           />
+          <span className="upload-filename">
+            {formData.photo ? formData.photo.name : "Upload your photo"}
+          </span>
         </div>
-        <button type="submit" className="form__submit" disabled={isSubmitting}>
+
+        <button type="submit" className="form__submit" disabled={!isFormValid}>
           {isSubmitting ? "Submitting..." : "Sign up"}
         </button>
       </form>
