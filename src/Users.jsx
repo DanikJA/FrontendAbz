@@ -41,7 +41,7 @@ const UsersSection = () => {
         {users.map((user) => (
           <div key={user.id} className="users__card">
             <img src={user.photo} alt={user.name} width="70" height="70" />
-            <h3 className="user__info">{user.name}</h3>
+            <p className="user__info__name">{user.name}</p>
             <p className="user__info">{user.position}</p>
             <p className="user__info">{user.email}</p>
             <p className="user__info">{user.phone}</p>

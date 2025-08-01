@@ -4,13 +4,13 @@
   max-width: 360px;
   padding: 0 16px;
   margin: 0 auto;
-  box-sizing: border-box;
+  box-sizing: сontent-box;
 }
 
 /* ≥ 768px */
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 768px;
     padding: 0 34px;
     margin: 0 auto;
   }

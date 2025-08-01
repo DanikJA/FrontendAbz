@@ -1,0 +1,87 @@
+.post-form {
+  background-color: #f8f8f8;
+  padding: 40px 16px;
+  text-align: center;
+  color: #000; /* <-- додай цей рядок */
+}
+.post-form__title {
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.form {
+  max-width: 380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form__label {
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.upload-block input[type="file"] {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.form__submit {
+  background-color: #f4e041;
+  border: none;
+  padding: 12px;
+  border-radius: 80px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form__submit:hover {
+  background-color: #00b2ff;
+  color: white;
+}
+
+/* 🎯 Стилізація radio buttons */
+input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d0cfcf;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  background-color: #00bdd3;
+  border-radius: 50%;
+}
+
+input[type="radio"]:focus {
+  border-color: #00bdd3;
+}

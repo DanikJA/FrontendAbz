@@ -10,6 +10,8 @@
   line-height: 1;
   text-align: center;
   color: rgba(0, 0, 0, 0.87);
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .users__list {
@@ -17,7 +19,7 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
   max-width: 1168px;
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
   padding: 0 10px;
 }
 
@@ -35,25 +37,12 @@
   height: 70px;
   object-fit: cover;
   border-radius: 100%;
-  margin-bottom: 15px;
-}
-
-.users__card h3 {
-  font-size: 18px;
-  margin: 10px 0 5px;
-  color: #000;
-}
-
-.users__card p {
-  margin: 4px 0;
-  font-size: 14px;
-  color: #555;
 }
 
 .users__btn {
   width: 120px;
   height: 34px;
-  margin-top: 37px;
+  margin-top: 0px;
   font-size: 16px;
   background: #f4e041;
   outline: none;
@@ -67,6 +56,15 @@
 }
 
 .user__info {
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+}
+
+.user__info__name {
+  margin: 20px 0px;
   font-size: 16px;
   line-height: 1.625;
   text-align: center;
